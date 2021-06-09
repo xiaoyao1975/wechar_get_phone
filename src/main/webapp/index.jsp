@@ -1,7 +1,8 @@
-<%@page contentType="text/html;utf-8" %>
+<%@page contentType="text/html;charset=UTF-8" %>
 
 <html>
 <body>
+<script src="js/jquery.js"></script>
 <h2>Hello World!</h2>
 <head>
     <title>hello</title>
@@ -11,6 +12,32 @@
 <body>
 <a href="./get_sessionkey.jsp"> click </a>
 <a href="./get_phone_number.jsp">click2</a>
+<a href="hello">hellos</a>>
+${name}
+<button onclick="abc()">abc click</button>
+<div id="test">
+
+</div>
+<script>
+    function abc() {
+        $.ajax({
+            url: "hello",
+            data: {
+                sql: "this is sql test select * from test"
+            },
+            success(res) {
+                $("#test").html(res);
+            }
+        });
+
+    }
+</script>
+
+
+<div>
+    name=${name}
+</div>
+
 </body>
 </body>
 </html>
