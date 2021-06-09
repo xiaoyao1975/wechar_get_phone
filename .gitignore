@@ -11,3 +11,4 @@ target
 *.jar
 *.class
 
+src/main/resources/
