@@ -1,6 +1,6 @@
 
-<%@page import="weChare_util.*"%>
-<%@page language="java" import="java.util.*"  pageEncoding="UTF-8"%>
+<%@page import="weChare_util.AESForWeixinGetPhoneNumber"%>
+<%@page language="java" import="weChare_util.WeixinPhoneDecryptInfo" pageEncoding="UTF-8"%>
 
 <%
     /* 得到手机号码 */
@@ -11,7 +11,6 @@
     String appId = "wx5693c9954980a68e";
     
     encryptedData = request.getParameter("encryptedData");
-
     iv = request.getParameter("iv");
     sessionKey = request.getParameter("sessionKey"); 
     
