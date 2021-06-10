@@ -15,6 +15,7 @@
 <a href="hello">hellos</a>>
 ${name}
 <button onclick="abc()">abc click</button>
+<button onclick="test2()">test2 click</button>
 <div id="test">
 
 </div>
@@ -24,6 +25,18 @@ ${name}
             url: "hello",
             data: {
                 sql: "this is sql test select * from test"
+            },
+            success(res) {
+                $("#test").html(res);
+            }
+        });
+
+    }
+    function test2() {
+        $.ajax({
+            url: "hello",
+            data: {
+                sql: "this is sql test select * from test2"
             },
             success(res) {
                 $("#test").html(res);
