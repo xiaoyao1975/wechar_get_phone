@@ -7,7 +7,6 @@ import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.io.PrintWriter;
 
-
 public class servletTest extends HttpServlet {
 
     public void server(HttpServletRequest request,HttpServletResponse response) throws ServletException, IOException {
@@ -16,10 +15,11 @@ public class servletTest extends HttpServlet {
         out.print(sql);
         out.println("this servlet test ");
     }
-
+    @Override
     public void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException{
         server(request,response);
     }
+    @Override
     public  void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         server(request,response);
     }

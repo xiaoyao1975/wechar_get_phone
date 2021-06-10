@@ -34,7 +34,7 @@ ${name}
     }
     function test2() {
         $.ajax({
-            url: "hello",
+            url: "test2",
             data: {
                 sql: "this is sql test select * from test2"
             },
