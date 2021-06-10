@@ -9,10 +9,8 @@ import javax.servlet.http.HttpSession;
 import java.io.IOException;
 import java.io.PrintWriter;
 
-@WebServlet("/hello")
 public class HelloServlet extends HttpServlet {
-    @Override
-    protected void service(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+    protected void server(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         super.service(req, resp);
         req.setCharacterEncoding("utf8");
         String sql=req.getParameter("sql");
@@ -20,10 +18,19 @@ public class HelloServlet extends HttpServlet {
         session.setAttribute("usr","hello 你好");
         //System.out.println(sql);
         PrintWriter pr=resp.getWriter();
-        pr.println("sql");
+        pr.println("hello:sql:"+sql);
         //将页面转发到欢迎页面
         //RequestDispatcher requestDispatcher = req.getRequestDispatcher("welcome.jsp");
         //requestDispatcher.forward(req,resp);
+    }
+
+    @Override
+    public void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException{
+        server(request,response);
+    }
+    @Override
+    public  void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+        server(request,response);
     }
 
 }
