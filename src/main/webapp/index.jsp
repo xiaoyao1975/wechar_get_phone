@@ -13,7 +13,8 @@
 <a href="./get_sessionkey.jsp"> click </a>
 <a href="./get_phone_number.jsp">click2</a>
 <a href="hello">hellos</a>>
-${name}
+
+
 <button onclick="abc()">abc click</button>
 <button onclick="test2()">test2 click</button>
 <div id="test">
@@ -52,7 +53,7 @@ hello
 
 
 <div>
-    name=${name}
+    name=${usr}
 </div>
 
 </body>
