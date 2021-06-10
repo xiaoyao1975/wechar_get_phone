@@ -11,18 +11,18 @@ import java.io.PrintWriter;
 
 public class HelloServlet extends HttpServlet {
     protected void server(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        super.service(req, resp);
         req.setCharacterEncoding("utf8");
         String sql=req.getParameter("sql");
         HttpSession session = req.getSession();
         session.setAttribute("usr","hello 你好");
-        //System.out.println(sql);
         PrintWriter pr=resp.getWriter();
-        pr.println("hello:sql:"+sql);
+        pr.println("HelloServlet:"+sql);
         //将页面转发到欢迎页面
         //RequestDispatcher requestDispatcher = req.getRequestDispatcher("welcome.jsp");
         //requestDispatcher.forward(req,resp);
     }
+
+
 
     @Override
     public void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException{

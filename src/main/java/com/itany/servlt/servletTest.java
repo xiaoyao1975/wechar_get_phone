@@ -12,8 +12,7 @@ public class servletTest extends HttpServlet {
     public void server(HttpServletRequest request,HttpServletResponse response) throws ServletException, IOException {
         PrintWriter out=response.getWriter();
         String sql = request.getParameter("sql");
-        out.print("hello : servlet test "+sql);
-        //out.println("hello : servlet test ");
+        out.print("servletTest: "+sql);
     }
     @Override
     public void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException{

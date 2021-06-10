@@ -31,7 +31,7 @@ hello
                 sql: "this is sql test select * from test"
             },
             success(res) {
-                $("#hello").html("hello"+res);
+                $("#hello").html(res);
             }
         });
 
