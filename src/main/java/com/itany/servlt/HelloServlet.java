@@ -12,7 +12,9 @@ import java.io.PrintWriter;
 
 public class HelloServlet extends HttpServlet {
     protected void server(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        //req.setCharacterEncoding("utf8");
+        req.setCharacterEncoding("utf8");
+        resp.setContentType("text/html");
+        resp.setCharacterEncoding("utf-8");
         String sql=req.getParameter("sql");
         HttpSession session = req.getSession();
         session.setAttribute("sql",sql);
